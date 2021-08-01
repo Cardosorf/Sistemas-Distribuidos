@@ -1,7 +1,7 @@
 # Aluno: Rafael Pais Cardoso
 # DRE: 116140788
-# Atividade: Lab 1 - Servidor de echo
-# Lado Passivo ("Servidor de echo")
+# Atividade: Lab 2
+# Lado Servidor
 
 import socket
 import json

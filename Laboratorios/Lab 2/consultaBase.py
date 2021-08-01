@@ -1,3 +1,8 @@
+# Aluno: Rafael Pais Cardoso
+# DRE: 116140788
+# Atividade: Lab 2
+# Auxiliar
+
 import os
 
 CAMINHO_DIRETORIO = os.path.join(os.path.dirname(__file__), "Arquivos") # caminho do diretório com os arquivos de texto
