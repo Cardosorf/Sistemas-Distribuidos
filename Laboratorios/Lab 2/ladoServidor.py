@@ -87,7 +87,7 @@ def IniciaServidor():
 				novoSock.send(bytes(json.dumps(json_obj_recv), encoding='utf-8')) 
 				continue
 
-            # verifica se o nome da palavra é válido. Caso não seja válido, retorna uma mensagem de erro para o cliente
+			# verifica se o nome da palavra é válido. Caso não seja válido, retorna uma mensagem de erro para o cliente
 			if(not NomeDaPalavraValido(json_obj_recv)):
 				novoSock.send(bytes(json.dumps(json_obj_recv), encoding='utf-8')) 
 				continue

@@ -20,7 +20,7 @@ def PegaCaminhoDoArquivo(mensagem_json):
 
 def CaminhoDoArquivoValido(mensagem_json):
 	caminhoArquivo = os.path.join(CAMINHO_DIRETORIO, mensagem_json["arquivo"])
-	
+
 	if os.path.isfile(caminhoArquivo):
 		return True
 	else:
@@ -29,11 +29,11 @@ def CaminhoDoArquivoValido(mensagem_json):
 		return False
 
 def LeArquivo(mensagem_json):
-    caminhoArquivo = PegaCaminhoDoArquivo(mensagem_json)
-    file           = open(caminhoArquivo, 'r', encoding="utf8")
-    
-    dados          = file.read()
+	caminhoArquivo = PegaCaminhoDoArquivo(mensagem_json)
+	file           = open(caminhoArquivo, 'r', encoding="utf8")
 
-    file.close()
+	dados          = file.read()
 
-    return dados
+	file.close()
+
+	return dados

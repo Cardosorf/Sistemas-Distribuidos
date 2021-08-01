@@ -45,7 +45,7 @@ def IniciaCliente():
 			break
 
 		while(not palavraBuscada or palavraBuscada.isspace()):
-			print('Palavra buscada nulo ou vazia. Por favor, digite algo válido')
+			print('Palavra buscada nula ou vazia. Por favor, digite algo válido')
 			palavraBuscada = str(input("Digite o nome da palavra: "))
 		
 		mensagem = MontaMensagem(nomeArquivo, palavraBuscada)
