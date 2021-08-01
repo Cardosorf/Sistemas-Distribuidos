@@ -6,7 +6,7 @@
 import socket
 import json
 import os
-import consultaBase
+import auxiliarBase
 
 HOST        = ''    # '' possibilita acessar qualquer endereco alcancavel da maquina local
 PORTA       = 5000  # porta onde chegarao as mensagens para essa aplicacao
@@ -37,7 +37,7 @@ def ContaPalavrasDoArquivo(mensagem_json):
 	print(mensagem.format(nomeArquivo = mensagem_json["arquivo"], nomePalavra = mensagem_json["palavra"]))
 
 	contador        = 0
-	dados           = consultaBase.LeArquivo(mensagem_json)
+	dados           = auxiliarBase.LeArquivo(mensagem_json)
 	dados 			= normalizacaoTokenizacao(dados)
 	listaPalavras   = dados.split()
 
@@ -78,12 +78,12 @@ def IniciaServidor():
 			NormalizaJson(json_obj_recv)
 
 			# verifica se o nome do arquivo é válido. Caso não seja válido, retorna uma mensagem de erro para o cliente
-			if(not consultaBase.NomeDoArquivoValido(json_obj_recv)):
+			if(not auxiliarBase.NomeDoArquivoValido(json_obj_recv)):
 				novoSock.send(bytes(json.dumps(json_obj_recv), encoding='utf-8')) 
 				continue
 
 			# verifica se o caminho do arquivo é válido. Caso não seja válido, retorna uma mensagem de erro para o cliente
-			if(not consultaBase.CaminhoDoArquivoValido(json_obj_recv)):
+			if(not auxiliarBase.CaminhoDoArquivoValido(json_obj_recv)):
 				novoSock.send(bytes(json.dumps(json_obj_recv), encoding='utf-8')) 
 				continue
 
