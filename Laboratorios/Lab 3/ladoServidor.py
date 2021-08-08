@@ -62,7 +62,7 @@ def ContaPalavrasDoArquivo(mensagem_json):
 
 	contador        = 0
 	dados           = auxiliarBase.LeArquivo(mensagem_json)
-	dados 			= normalizacaoTokenizacao(dados)
+	dados           = normalizacaoTokenizacao(dados)
 	listaPalavras   = dados.split()
 
 	for i in range(len(listaPalavras)):
