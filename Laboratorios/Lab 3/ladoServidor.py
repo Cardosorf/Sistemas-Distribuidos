@@ -151,6 +151,8 @@ def Main():
 
 	print("Pronto para receber conexoes...")
 
+	print("Comandos basicos do servidor: \n'fim' para finalizar o servidor quando nao existir clientes ativos; \n'historico' para listar o historico de conexoes; \n'ativos' para listar os clientes ainda ativos")
+
 	while(True):
 		#espera por qualquer entrada de interesse
 		leitura, escrita, excecao = select.select(entradas, [], [])
